@@ -31,13 +31,15 @@ Four files used:
 ## Project Structure
 
 ```
-notebooks/
-├── 01_data_setup.ipynb        # Download NHANES, merge files, create label
-├── 02_eda.ipynb               # Exploratory data analysis and plots
-├── 03_preprocessing.ipynb     # Encoding, scaling, train/test split
-├── 04_baseline_models.ipynb   # LR, Random Forest, XGBoost + SHAP
-├── 05_llm_experiments.ipynb   # 8 LLM prompting experiments via Groq API
-└── 06_analysis.ipynb          # Failure analysis and final comparison
+ptsd-risk-prediction/
+├── README.md
+├── requirements.txt
+├── 01_data_setup.ipynb
+├── 02_eda.ipynb
+├── 03_preprocessing.ipynb
+├── 04_baseline_models.ipynb
+├── 05_llm_experiments.ipynb
+└── 06_analysis.ipynb
 ```
 
 ---
