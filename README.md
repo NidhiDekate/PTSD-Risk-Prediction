@@ -40,6 +40,7 @@ ptsd-risk-prediction/
 ├── 04_baseline_models.ipynb
 ├── 05_llm_experiments.ipynb
 └── 06_analysis.ipynb
+├── 07_interpretability_debate.ipynb  # LLM interpretability + faithfulness + debate
 ```
 
 ---
@@ -103,6 +104,14 @@ More complex formats (F3, F4) caused the LLM to give verbose responses instead o
 5. **The LLM reasons clinically, not statistically** — it flags PHQ=9 as concerning (medically reasonable) but our label says low risk (PHQ < 10). This reveals a fundamental difference between LLM contextual reasoning and threshold-based classification
 
 6. **Complex prompts hurt reliability** — clinical and SHAP-guided formats caused unparseable responses, showing LLMs become less predictable as prompt complexity increases
+
+7. **LLM accuracy drops by severity** — 100% accurate on PHQ>12, only 40% on PHQ 10-12
+
+8. **Right for wrong reasons** — LLM explanations moderately faithful to SHAP (avg 0.69) but 2/15 patients had correct predictions with wrong reasoning
+
+9. **Debate did not help** — structured two-LLM debate on borderline cases showed no improvement, judge consistently sided with high risk
+
+10. **Core limitation confirmed** — LLMs apply clinical conservatism and cannot learn hard numerical thresholds without fine-tuning on labeled data 
 
 ---
 
